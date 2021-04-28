@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="projectStyle.css">
+    <script src="popups.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="home"> <!--add the header(his section) and main tags, home id for header, id for main body, add breaks between p tags, add code to script(in addition), remove a tags for do popups add html for ecrypt,decrypt, decompress, compress-->
+        <h1>Crypto.IO</h1>
+        <p>You've come to the right place! Here we allow you to encrypy, decrypt, compress and decompress your files.</p>
+        <img src="lockimage.jfif" alt="lock">
+    </header>
+    <main id="homeMain">
+        <div class="encrypt">
+            <p>Encrypt</p>
+            <br>
+            <p>Click here to encrypt your file</p>
+            <br>
+            <button onclick="opens1en()">Start</button>
+        </div>
+    
+        <div class="decrypt">
+            <p>Decrypt</p>
+            <br>
+            <p>Click here to decrypt an encrypted file</p>
+            <br>
+            <button onclick="opens1dec()">Start</button>
+        </div>
+    
+        <div class="compress">
+            <p>Compress</p>
+            <br>
+            <p>Click here to compress your file</p>
+            <br>
+            <button onclick="opens1com()">Start</button>
+        </div>
+    
+        <div class="decompress">
+            <p>Decompress</p>
+            <br>
+            <p>Click here to decompress a compressed file</p>
+            <br>
+            <button onclick="opens1decom()">Start</button>
+        </div>
+    </main>
+
+    <footer>
+        <a href="about1.html">About</a>
+        <a href="contact1.html">Contact Us</a>
+        <a href="Creators1.html">Creators</a>
+        <footer>&copy; Crypto.IO 2021 </footer>
+    </footer>
+
+    <!--this is the code for the modal/popups-->
+    <!--Popups for Encrypt-->
+    <div id="modal1en">
+        <h1>Encrypt</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
+        </form>
+        <button id="close" onclick="closes1en()">Continue</button>
+        <button id="close" onclick="userClose1En()">Cancel</button>
+    </div>  
+
+    <div id="modal2en">
+        <h1>Encrypt</h1>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd">
+        <button id="close" onclick="closes2en()">Continue</button>
+        <button id="close" onclick="userClose2En()">Cancel</button>
+    </div>
+
+    <div id="modal3en">
+        <h1>Encrypt</h1>
+        <p>EncryptedFile.enc is ready to be downloaded</p>
+        <button id="close" onclick="closes3en()">Download</button>
+    </div>  
+
+    <!--Popups for Decrypt-->
+    <div id="modal1dec">
+        <h1>Decrypt</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
+        </form>
+        <button id="close" onclick="closes1dec()">Continue</button>
+        <button id="close" onclick="userClose1Dec()">Cancel</button>
+    </div>  
+    <div id="modal2dec">
+        <h1>Decrypt</h1>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd">
+        <button id="close" onclick="closes2dec()">Continue</button>
+        <button id="close" onclick="userClose2Dec()">Cancel</button>
+    </div>
+    <div id="modal3dec">
+        <h1>Decrypt</h1>
+        <p>EncryptedFile.enc is ready to be downloaded</p>
+        <button id="close" onclick="closes3dec()">Download</button>
+    </div>  
+
+    <!--Popups for Compress-->
+    <div id="modal1com">
+        <h1>Compress</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
+        </form>
+        <button id="close" onclick="closes1com()">Continue</button>
+        <button id="close" onclick="userClose1Com()">Cancel</button>
+    </div>  
+    <div id="modal2com">
+        <h1>Compress</h1>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd">
+        <button id="close" onclick="closes2com()">Continue</button>
+        <button id="close" onclick="userClose2Com()">Cancel</button>
+    </div>
+    <div id="modal3com">
+        <h1>Compress</h1>
+        <p>EncryptedFile.enc is ready to be downloaded</p>
+        <button id="close" onclick="closes3com()">Download</button>
+    </div>  
+
+    <!--Popups for Decompress-->
+    <div id="modal1decom">
+        <h1>Decompress</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
+        </form>
+        <button id="close" onclick="closes1decom()">Continue</button>
+        <button id="close" onclick="userClose1Decom()">Cancel</button>
+    </div>  
+    <div id="modal2decom">
+        <h1>Decompress</h1>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd">
+        <button id="close" onclick="closes2decom()">Continue</button>
+        <button id="close" onclick="userClose2Decom()">Cancel</button>
+    </div>
+    <div id="modal3decom">
+        <h1>Decompress</h1>
+        <p>EncryptedFile.enc is ready to be downloaded</p>
+        <button id="close" onclick="closes3decom()">Download</button>
+    </div>    
+
+</body>
+</html>
