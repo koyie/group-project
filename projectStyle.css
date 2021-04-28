@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Asap;
+    font-size: 16px;
+    background: white;
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+/* header for home page */
+#home {
+    display: flex;
+    background-color:#D9B08C;
+    height: 200px;
+    margin-bottom: 100px;
+    z-index: 3;
+}
+
+header h1 {
+    width: 300px;
+    color: white;
+    background: lightblue;
+    margin-top: 20px;
+    padding: 15px;
+    display:inline-block;
+    position: absolute;
+    top: 0px;
+    left: 5%;
+    z-index: 2;
+}
+
+header p {
+    width: 300px;
+    color:gray;
+    background: lightblue;
+    padding: 15px;
+    position: absolute;
+    top: 75px;
+    left: 5%;
+    z-index: 2;
+}
+header img {
+    position: absolute;
+    left: 320px;
+    top: 10px;
+    z-index: 1;
+}
+
+/* header for other pages*/
+header {
+    background: #D9B08C;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header h2 {
+    color: white;
+    background: #D9B08C;
+    padding: 15px 100px;
+    float: left;
+}
+
+header h3 {
+    color: white;
+    background: #D9B08C;
+    padding: 15px 100px;
+    float: right;
+}
+
+header h3:hover {
+    background-color: gray;
+}
+
+/*main content for home page*/
+#homeMain {
+    padding-top: 200px;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px 10px;
+    background: white;
+}
+
+#homeMain div{
+    border: 2px solid #D9B08C;
+    background: white;
+    display: inline-block;
+    text-align: left;
+    
+}
+#homeMain p {
+    text-align: left;
+} 
+
+main button {
+    float: right;
+    text-align: center;
+    color: white;
+    background-color: #116466;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+}
+
+main button:hover {
+    background-color: #0d4a4b;
+}
+
+/* main content for rest of pages*/
+main {
+    background: white;
+    margin: 0 auto;
+    padding: 40px 30px;
+    padding-top: 40px;
+    padding-bottom: 75px;
+}
+
+main h4 {
+    color: black;
+    padding: 30px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 15px 30px;
+    max-width: 1000px;
+}
+
+main div {
+    padding: 10px;
+    margin: 20px 10px 10px 10px;
+}
+
+main p {
+    padding: 20px;
+    float: left;
+}
+
+main img {
+    float: right;
+}
+
+main input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+main .description {
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+main input[type=submit] {
+    text-align: center;
+    display: block;
+    color: white;
+    background-color: #116466;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #0d4a4b;
+}
+
+/*footer for all pages*/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: #116466;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 50px;
+    float: right;
+}
+
+/* The Modal/Popups */
+/*Popups for Encryption*/
+#modal1en {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal2en {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal3en {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto; 
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+/*popups for decryption*/
+#modal1dec {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal2dec {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal3dec {
+    display: none;
+    position: relative; 
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+/*popups for compression*/
+#modal1com {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal2com {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal3com {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto; 
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+/*popups for decompression*/
+#modal1decom {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal2decom {
+    display: none;
+    position: relative;
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+#modal3decom {
+    display: none;
+    position: relative; 
+    top: -300px;
+    margin:auto;
+    z-index: 1;
+    width: 70vw; 
+    height: 70vh; 
+    background: lightgray;
+    padding: 30px;
+    text-align: justify;
+    border-radius: 50px;
+    align-items: center;
+}
+
+/*Buttons for popups*/
+button {
+    color: white;
+    background-color: #116466;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+}
+
+button:hover {
+    background-color: #0d4a4b;
+}
