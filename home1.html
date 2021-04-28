@@ -69,6 +69,12 @@
 
     <div id="modal2en">
         <h1>Encrypt</h1>
+        <select>
+            <option value="AES">AES</option>
+            <option value="DES">DES</option>
+            <option value="MD5">MD5</option>
+        </select>
+        <br>
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" name="pwd">
         <button id="close" onclick="closes2en()">Continue</button>
@@ -93,6 +99,12 @@
     </div>  
     <div id="modal2dec">
         <h1>Decrypt</h1>
+        <select>
+            <option value="AES">AES</option>
+            <option value="DES">DES</option>
+            <option value="MD5">MD5</option>
+        </select>
+        <br>
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" name="pwd">
         <button id="close" onclick="closes2dec()">Continue</button>
@@ -116,6 +128,11 @@
     </div>  
     <div id="modal2com">
         <h1>Compress</h1>
+        <select>
+            <option value="LZ77">LZ77</option>
+            <option value="DEFLATE">DEFLATE</option>
+        </select>
+        <br>
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" name="pwd">
         <button id="close" onclick="closes2com()">Continue</button>
@@ -139,6 +156,11 @@
     </div>  
     <div id="modal2decom">
         <h1>Decompress</h1>
+        <select>
+            <option value="LZ77">LZ77</option>
+            <option value="DEFLATE">DEFLATE</option>
+        </select>
+        <br>
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" name="pwd">
         <button id="close" onclick="closes2decom()">Continue</button>
