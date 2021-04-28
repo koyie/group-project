@@ -397,3 +397,14 @@ button {
 button:hover {
     background-color: #0d4a4b;
 }
+
+option{
+    color: white;
+    background-color: #116466;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    font: Asap;
+}
