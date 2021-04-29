@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="aes.js"></script>
+    <script src="tripledes.js"></script>
+    <script src="rabbit.js"></script>
 </head>
+
+
 <body>
-    <center>
-    <h1>Encrypt</h1>
-    <p>Drop Your File Here or Choose...</p>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        
-    </form>
-    <br>
-
-    <button>AES</button>
-    <button>TrippleDES</button>
-    <button>Rabbit</button>
-    <br>
-    <br>
-        
-    <label for="pwd">Password:</label>
-<input type="password" id="pwd" name="pwd">
-<button>Continue</button>
+	<center>
+		<h1>Encrypt</h1>
+		
+<input type="file" id="file-input" />
 <br>
-    <p>EncryptedFile.enc is ready to be downloaded</p>
-    <button>Download</button>
+<br>
+<button id="AES-encode">AES Encrypt</button>
+<button id="3DES-encode">3DES Encrypt</button>
+<button id="Rabbit-encode">Rabbit Encrypt</button>
 
-    <h1>Decrypt</h1>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        
-    </form>
-        <br>
-    <button>AES</button>
-    <button>TrippleDES</button>
-    <button>Rabbit</button>
-        <br>
-    <label for="pwd">Password:</label>
-<input type="password" id="pwd" name="pwd">
-<button>Continue</button>
+<br>
+<br>
+<textarea id="file-encode" rows="4" cols="50"></textarea>
 
-<p>EncryptedFile.enc is ready to be downloaded</p>
-<button>Download</button>
-</center>
+
+<script>
+	document.getElementById("AES-encode").addEventListener('click', function() {
+		let file = document.getElementById("file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+                var encrypted = CryptoJS.AES.encrypt(text, "password");
+                var decrypted = CryptoJS.AES.decrypt(encrypted, "password");
+	    		document.getElementById("file-encode").textContent = encrypted;
+                document.getElementById("file-decode").textContent = decrypted;
+		});
+		reader.readAsText(file);
+	});
+    document.getElementById("3DES-encode").addEventListener('click', function() {
+		let file = document.getElementById("file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+                var encrypted = CryptoJS.TripleDES.encrypt(text, "password");
+                var decrypted = CryptoJS.TripleDES.decrypt(encrypted, "password");
+	    		document.getElementById("file-encode").textContent = encrypted;
+                document.getElementById("file-decode").textContent = decrypted;
+		});
+		reader.readAsText(file);
+	});
+    document.getElementById("Rabbit-encode").addEventListener('click', function() {
+		let file = document.getElementById("file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+                var encrypted = CryptoJS.Rabbit.encrypt(text, "password");
+                var decrypted = CryptoJS.Rabbit.decrypt(encrypted, "password");
+	    		document.getElementById("file-encode").textContent = encrypted;
+                document.getElementById("file-decode").textContent = decrypted;
+		});
+		reader.readAsText(file);
+	});
+    document.getElementById("AES-decode").addEventListener('click', function() {
+		let file = document.getElementById("file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+                var encrypted = CryptoJS.AES.decrypt(text, "password");
+	    		document.getElementById("file-encode").textContent = encrypted;
+		});
+		reader.readAsText(file);
+	});
+    document.getElementById("3DES-decode").addEventListener('click', function() {
+		let file = document.getElementById("file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+                var encrypted = CryptoJS.TripleDES.decrypt(text, "password");
+	    		document.getElementById("file-encode").textContent = encrypted;
+		});
+		reader.readAsText(file);
+	});
+    document.getElementById("Rabbit-decode").addEventListener('click', function() {
+		let file = document.getElementById("file-input").files[0];
+		let reader = new FileReader();
+		reader.addEventListener('load', function(e) {
+	    		let text = e.target.result;
+                var encrypted = CryptoJS.Rabbit.decrypt(text, "password");
+	    		document.getElementById("file-encode").textContent = encrypted;
+		});
+		reader.readAsText(file);
+	});
+</script>
+<h1>Decrypt</h1>
+	<br>
+	<br>
+		<button id="AES-decode">AES Decrypt</button>
+		<button id="3DES-decode">3DES Decrypt</button>
+		<button id="Rabbit-decode">Rabbit Decrypt</button>
+	<br>
+	<br>
+		<textarea id="file-decode" rows="4" cols="50"></textarea>
 </body>
 </html>
+
