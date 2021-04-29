@@ -28,8 +28,14 @@
     <input type="text"></input><br>
     <label for="description" id="description">Description:</label><br>
     <input type="text" size="50" style="height: 100px;"></input>
-    <input type="submit"></input>
-    
+    <input type="submit" id="btnClick"></input>
+	<script type="text/javascript">
+		document.getElementById("btnClick").onclick = clickEvent;
+		function clickEvent() {
+			alert("Thank you for the feedback. We will contact you soon!");
+		};
+		
+	</script>
     </main>
     <br>
     <br>
