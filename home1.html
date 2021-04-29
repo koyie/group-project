@@ -60,60 +60,40 @@
     <div id="modal1en">
         <h1>Encrypt</h1>
         <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
+        Select image to upload:
+        <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
         </form>
+        <br>
+        <button id="AES-encode">AES Encrypt</button>
+        <button id="3DES-encode">3DES Encrypt</button>
+        <button id="Rabbit-encode">Rabbit Encrypt</button>
+        <br>
+        <br>
+        <textarea id="file-decode" rows="4" cols="50"></textarea>
+        <br>
+        <br>
         <button id="close" onclick="closes1en()">Continue</button>
         <button id="close" onclick="userClose1En()">Cancel</button>
-    </div>  
-
-    <div id="modal2en">
-        <h1>Encrypt</h1>
-        <select>
-            <option value="AES">AES</option>
-            <option value="DES">DES</option>
-            <option value="MD5">MD5</option>
-        </select>
-        <br>
-        <label for="pwd">Password:</label>
-        <input type="password" id="pwd" name="pwd">
-        <button id="close" onclick="closes2en()">Continue</button>
-        <button id="close" onclick="userClose2En()">Cancel</button>
     </div>
-
-    <div id="modal3en">
-        <h1>Encrypt</h1>
-        <p>EncryptedFile.enc is ready to be downloaded</p>
-        <button id="close" onclick="closes3en()">Download</button>
-    </div>  
 
     <!--Popups for Decrypt-->
     <div id="modal1dec">
         <h1>Decrypt</h1>
         <form action="upload.php" method="post" enctype="multipart/form-data">
             Select image to upload:
-            <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
+        <input id="btn" type="file" name="fileToUpload" id="fileToUpload">
         </form>
+        <br>
+        <button id="AES-decode">AES Decrypt</button>
+		<button id="3DES-decode">3DES Decrypt</button>
+		<button id="Rabbit-decode">Rabbit Decrypt</button>
+        <br>
+        <br>
+        <textarea id="file-decode" rows="4" cols="50"></textarea>
+        <br>
+        <br>
         <button id="close" onclick="closes1dec()">Continue</button>
         <button id="close" onclick="userClose1Dec()">Cancel</button>
-    </div>  
-    <div id="modal2dec">
-        <h1>Decrypt</h1>
-        <select>
-            <option value="AES">AES</option>
-            <option value="DES">DES</option>
-            <option value="MD5">MD5</option>
-        </select>
-        <br>
-        <label for="pwd">Password:</label>
-        <input type="password" id="pwd" name="pwd">
-        <button id="close" onclick="closes2dec()">Continue</button>
-        <button id="close" onclick="userClose2Dec()">Cancel</button>
-    </div>
-    <div id="modal3dec">
-        <h1>Decrypt</h1>
-        <p>EncryptedFile.enc is ready to be downloaded</p>
-        <button id="close" onclick="closes3dec()">Download</button>
     </div>  
 
     <!--Popups for Compress-->
